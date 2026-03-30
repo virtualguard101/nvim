@@ -1,58 +1,38 @@
 ---@diagnostic disable: undefined-global
-vim.o.timeout = true;
-vim.o.timeoutlen = 300;
+vim.o.timeout = true
+vim.o.timeoutlen = 300
 
-require("which-key").setup();
-local wk = require("which-key");
+require("which-key").setup()
 
-wk.register({
-  --
+require("which-key").add({
+  { "<leader>h", desc = "Highlight Turn OFF" },
+  { "<leader>n", desc = "Nvim Tree Toogle" },
 
-  h = "Highlight Turn OFF",
-  n = "Nvim Tree Toogle",
+  { "<leader>b", group = "Buffer Tabs" },
+  { "<leader>bq", desc = "Quit Tab (Close current tab)" },
+  { "<leader>bc", desc = "Quit all Tabs (but not PIN & Current)" },
+  { "<leader>bs", desc = "Select a Tab by its letter" },
+  { "<leader>bp", desc = "PIN a Tab" },
+  { "<leader>b<Left>", desc = "Previous Tab" },
+  { "<leader>b<Right>", desc = "Next Tab" },
 
-  --
+  { "<leader>d", group = "Debugging" },
+  { "<leader>db", desc = "Toggle Breakpoint" },
+  { "<leader>dc", desc = "Continue" },
+  { "<leader>di", desc = "Step Into" },
+  { "<leader>do", desc = "Step Over" },
 
-  b = {
-    name = "Buffer Tabs",
-    q = "Quit Tab (Close current tab)",
-    c = "Quit all Tabs (but not PIN & Current)",
-    s = "Select a Tab by its letter",
-    p = "PIN a Tab",
-    ["<Left>"] = "Previous Tab",
-    ["Right"] = "Next Tab",
-  },
+  { "<leader>f", group = "Telescope" },
+  { "<leader>ff", desc = "Find all Files in the project" },
+  { "<leader>fr", desc = "Find in Recently opened files" },
+  { "<leader>fg", desc = "Live Grep in the project" },
+  { "<leader>fb", desc = "Switch Buffers" },
+  { "<leader>fh", desc = "Help Tags" },
+  { "<leader>fu", desc = "Telescope undo" },
+  { "<leader>ft", desc = "Todo Comments Browser" },
 
-  --
-  d = {
-    name = "Debugging",
-    b = "Toggle Breakpoint",
-    c = "Continue",
-    i = "Step Into",
-    o = "Step Over",
-  },
-
-  --
-
-  f = {
-    name = "Telescope",
-    f = "Find all Files in the project",
-    r = "Find in Recently opened files",
-    g = "Live Grep in the project",
-    b = "Switch Buffers",
-    h = "Help Tags",
-    s = "Switch Project Sessions",
-    t = "Todo Comments Browser",
-  },
-
-  --
-
-  t = {
-    name = "Terminal",
-    f = "Toggle Floating",
-    h = "Toggle Horizontal -- (x-axis)",
-    v = "Toggle Vertical | (y-axis)",
-  },
-
-  --
-}, { prefix = "<leader>" })
+  { "<leader>t", group = "Terminal" },
+  { "<leader>tf", desc = "Toggle Floating" },
+  { "<leader>th", desc = "Toggle Horizontal -- (x-axis)" },
+  { "<leader>tv", desc = "Toggle Vertical | (y-axis)" },
+})

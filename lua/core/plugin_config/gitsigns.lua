@@ -37,9 +37,6 @@ require('gitsigns').setup {
     row = 0,
     col = 1
   },
-  yadm = {
-    enable = false
-  },
 }
 
 vim.cmd([[ Gitsigns toggle_current_line_blame ]])

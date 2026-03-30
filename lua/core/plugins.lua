@@ -18,7 +18,8 @@ return require('packer').startup(function(use)
   use "nvim-tree/nvim-tree.lua"
   use "nvim-tree/nvim-web-devicons"
   use "nvim-lualine/lualine.nvim"
-  use "nvim-treesitter/nvim-treesitter"
+  -- nvim-treesitter omitted: needs tree-sitter CLI + extra parsers; Neovim bundles
+  -- core parsers (see :checkhealth vim.treesitter). Better fit for 2vCPU/1GiB hosts.
   use "nvim-lua/plenary.nvim"
   use {
     "nvim-telescope/telescope.nvim",
@@ -32,7 +33,6 @@ return require('packer').startup(function(use)
   use "eoh-bse/minintro.nvim"
   use "stevearc/oil.nvim"
   use "NvChad/nvterm"
-  use "github/copilot.vim"
   use "folke/which-key.nvim"
   use "folke/twilight.nvim"
   use "folke/zen-mode.nvim"
@@ -52,9 +52,10 @@ return require('packer').startup(function(use)
   use {
     "mfussenegger/nvim-dap",
     requires = {
+      "nvim-neotest/nvim-nio",
       "theHamsta/nvim-dap-virtual-text",
-      "rcarriga/nvim-dap-ui"
-    }
+      "rcarriga/nvim-dap-ui",
+    },
   }
   -- NodeJS Debug Adapter
   use "mxsdev/nvim-dap-vscode-js"
