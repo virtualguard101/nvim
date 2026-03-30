@@ -119,31 +119,6 @@ _G.packer_plugins = {
     path = "/home/virtualguard/.local/share/nvim/site/pack/packer/start/minintro.nvim",
     url = "https://github.com/eoh-bse/minintro.nvim"
   },
-  ["nvim-dap"] = {
-    loaded = true,
-    path = "/home/virtualguard/.local/share/nvim/site/pack/packer/start/nvim-dap",
-    url = "https://github.com/mfussenegger/nvim-dap"
-  },
-  ["nvim-dap-ui"] = {
-    loaded = true,
-    path = "/home/virtualguard/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
-    url = "https://github.com/rcarriga/nvim-dap-ui"
-  },
-  ["nvim-dap-virtual-text"] = {
-    loaded = true,
-    path = "/home/virtualguard/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text",
-    url = "https://github.com/theHamsta/nvim-dap-virtual-text"
-  },
-  ["nvim-dap-vscode-js"] = {
-    loaded = true,
-    path = "/home/virtualguard/.local/share/nvim/site/pack/packer/start/nvim-dap-vscode-js",
-    url = "https://github.com/mxsdev/nvim-dap-vscode-js"
-  },
-  ["nvim-nio"] = {
-    loaded = true,
-    path = "/home/virtualguard/.local/share/nvim/site/pack/packer/start/nvim-nio",
-    url = "https://github.com/nvim-neotest/nvim-nio"
-  },
   ["nvim-surround"] = {
     loaded = true,
     path = "/home/virtualguard/.local/share/nvim/site/pack/packer/start/nvim-surround",
@@ -208,12 +183,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/virtualguard/.local/share/nvim/site/pack/packer/start/vim-visual-multi",
     url = "https://github.com/mg979/vim-visual-multi"
-  },
-  ["vscode-js-debug"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/virtualguard/.local/share/nvim/site/pack/packer/opt/vscode-js-debug",
-    url = "https://github.com/microsoft/vscode-js-debug"
   },
   ["which-key.nvim"] = {
     loaded = true,

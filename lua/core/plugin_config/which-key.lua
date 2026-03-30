@@ -16,12 +16,6 @@ require("which-key").add({
   { "<leader>b<Left>", desc = "Previous Tab" },
   { "<leader>b<Right>", desc = "Next Tab" },
 
-  { "<leader>d", group = "Debugging" },
-  { "<leader>db", desc = "Toggle Breakpoint" },
-  { "<leader>dc", desc = "Continue" },
-  { "<leader>di", desc = "Step Into" },
-  { "<leader>do", desc = "Step Over" },
-
   { "<leader>f", group = "Telescope" },
   { "<leader>ff", desc = "Find all Files in the project" },
   { "<leader>fr", desc = "Find in Recently opened files" },

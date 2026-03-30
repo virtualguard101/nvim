@@ -49,22 +49,6 @@ return require('packer').startup(function(use)
     branch = "release",
   }
 
-  use {
-    "mfussenegger/nvim-dap",
-    requires = {
-      "nvim-neotest/nvim-nio",
-      "theHamsta/nvim-dap-virtual-text",
-      "rcarriga/nvim-dap-ui",
-    },
-  }
-  -- NodeJS Debug Adapter
-  use "mxsdev/nvim-dap-vscode-js"
-  use {
-    "microsoft/vscode-js-debug",
-    opt = true,
-    run = "yarn install --ignore-optional ; npx gulp vsDebugServerBundle ; mv dist out"
-  }
-
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
